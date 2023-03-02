@@ -1,0 +1,98 @@
+DOM:
+Document Object Model. it contains all the code of a given website or page.
+Web Element:
+     Everything we see on a webpage is called a web element.
+Text Box:
+     is where we can enter or input data
+Button:
+     is where we click on.
+
+In Selenium, whenever we need to find a particular webElement, we can do that using LOCATORS.
+How many locators do we have in Selenium: 8 Locators.
+1. ID
+2. Name
+3. Class
+4. linkText ---> they can only be used with a link and it must have a text (a link is usually in the tag <a>)
+5. partial link-text  ---> they can only be used with a link and it must have a text or partial text (a link is usually in the tag <a>)
+6. Xpath
+7. TagName --> just specify the tag that you want to find
+8. Css
+
+Why do we need so many locators:
+1)  Sometimes there might be a locator with duplicate value
+    example;
+        <input id="email",name="a"> //first example //in other to ascertain which webElement to locate
+        <input id="email",name="b"> //second example //We need to go with the (name) locator instead of the (id)
+2)  Sometimes the developers might not provide you with all the locators
+    example;
+        <input class="login"> //if you have only one locator(class) you can't use another except the (class) locator
+
+There are some important things that you should remember while selecting a locator
+if an attribute value has a number in it, it is better to avoid it and use an alternative locator.!!!
+
+Difference between linkText and partial link text:
+    A partial linkText you can use just a part of the text, just make sure that it is unique enough to stand out.
+
+findElement method:
+   it is used to find elements from the WebElement like (text box), (button)
+   once you find the element you can perform some operation on it like
+   driver.findElement(By.id().click or
+   driver.findElement(By.id().sendkeys("")
+there are other functions too like:
+   driver.findElement(By.id().getText()
+
+
+example of finding a particular element on a webpage using automation
+
+<html>
+  <body>
+     <input id="name", class="box",x="you">Username</input>
+     <input id="pass",class="box">password</input>
+      <button id="btn",class="login">login</button>
+   </body>
+   </html>
+
+//To find an element of TextBox and entering data
+driver.findElement(by.id("name")).sendkeys("esther")
+
+//To find an element of TextBox and entering data
+driver.findElement(by.id("pass")).sendkeys("1234G")
+
+//To find and element of login and click button
+driver.findElement(by.class("login")).click()
+
+
+What did we learn today?
+Locators:
+   Locators in selenium help us find the WebElements
+
+   we have 8 Locators
+   id, name, className
+
+   LinkText, partial LinkText (they can only be used for <a> and it must also have some text)
+
+   TagName (We just need to pass the tag-name and it is going to find that particular webElement)
+
+   DOM--> document object model:
+         This is where we have the whole code for the website
+
+Scenario:
+If there are two elements with the same attribute value what will happen?
+         Selenium is going to get the first one it encounters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
