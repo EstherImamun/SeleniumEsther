@@ -1,0 +1,168 @@
+Locators in Selenium:
+
+1. id
+2. class name
+3. link text (that it must have a link tag <a> and it must have a text)
+4. partial link text ()
+5. tagName
+6. Xpath
+7. CSS
+
+Xpath:
+There are two kind of Xpath:
+   1. Relative Xpath
+  a. Syntax for Xpath (finding by attribute)
+    //tagName[@attribute='attribute value']
+
+   Translation:
+   hey get me the tagName that has an 'attribute' whose value is "attribute value
+
+  --------------------------------------- Example-----------------------------------------------------
+
+   <input name ="abra", class ="hjhfjh"/>
+
+   task is to write down the Xpath to get to this webElement:
+
+  //input [@name='abra']
+
+  translate:
+  hey get me the tag "input" which has and attribute name whose value is "abra";
+
+  Xpath have more features like find by text, find by partial text e.t.c
+  the concept remains the same only the syntax will differ.
+  -------------------------------------------------------------------------------------------------------
+  b. Syntax for Xpath (finding by text):
+  //tagName[text()='text value']
+
+  translation:
+  hey get me the tag-name which has a text "text value".
+
+  condition:
+  our html code (web-element) must have text.
+  Example:
+  <button id="tro", class="fyo"> hello</button>
+  answer:
+  //button[text()='hello']
+  ----------------------------------------------------------------------------------------------------------
+
+  c. Syntax for Xpath (finding by contains method):
+  a. for attribute
+  //tag-name[contains(@attribute, 'partial attribute value')]
+
+  translation:
+  get me the tag-name which has an attribute whose value contains "partial value of the attribute"
+  ------------------------------Example---------------------------------------------------------------
+  <input email="how are you i am fine, thank you" id="jdgf"/>
+  Xpath using contains method:
+  //input[contains(@email,'how are you')]
+  -------------------------------------------------------------------------------------------
+  C) b. for text
+    //tag-name[contains(text(), 'partial text value')]
+
+    contains can be used in a scenario where
+    1. the attribute or text is very long
+    2. when part of the value or text is dynamic
+Example:
+<button id='hello 0/>
+ans: //button[@id='hello O'] can't be used because the digits can change each time the page is reloaded
+correct ans //button[contains(@id,'hello')] can be used because the contains method helps us use partial attribute value
+---------------------------------------------------------------------------------------------------------
+
+in Xpath we learned 4 types
+
+a. by attribute                 //tag-name[@attribute='attribute value']
+B. by text                      //tag-name[text()='text value']
+c. by partial attribute value   //tag-name[contains(@attribute,'partial attribute value')]
+d. by partial text value        //tag-name[contains(text(),'partial text value')]
+
+We learned two more methods
+
+1. clear() --> it clears the text box
+2. getText() --> it gets the text from the webElement (if no text is present, it will print empty)
+
+Scenario:
+You tried a lot but still you were unable to find the unique xpath or locator for a webElement, it always shows 1 of 2
+
+Which one will be accessed when u used driver.findElement??
+
+Ans: the First one that is encountered.
+
+Scenario:
+if you are unable to find a unique and it always shows 1 of 2 or 1 of 4, then you can use indexing but make
+sure it is the last resort as any addition or changes in code might affect indexing
+
+Syntax:
+//tag-name[@attribute="attribute value"][index] ---> index starts from 1 here not 0.
+
+
+ -------------------------------------Absolute Xpath--------------------------------------------------------
+ Absolute Xpath refers to the exact pin point of the location of the element but it is usually avoided, not used that
+ much in the industry. As little change in DOM can change that location.
+
+
+<html>
+  <head>
+      <title> myWebPage </title>
+  <head>
+   <body>
+      <input id='email'/>
+      <button x="a">hello</button>
+      <a>
+         <input id="dsdad"/>
+         <input id="ab"/>
+         <input id="troy"/>
+      <a>
+   <body>
+
+<html>
+
+Question:
+get the third input tag with id="troy"
+Answer:
+/html/body/a/input[3]
+
+---------------------------------------------------------------------------------------------------
+
+--------------------------------------By tagName-----------------------------------------------------
+
+in order to use this locator u just give the tagName. it is very helpful in scenarios where you want to get
+multiple elements with the same tag name.
+
+
+task: go to amazon.com and get all the links.
+
+---------------------------------revise--------------------------------------------------
+
+1. Xpath
+a. Relative
+  a. by attribute                 //tag-name[@attribute='attribute value']
+  B. by text                      //tag-name[text()='text value']
+  c. by partial attribute value   //tag-name[contains(@attribute,'partial attribute value')]
+  d. by partial text value        //tag-name[contains(text(),'partial text value')]
+
+B. Absolute
+
+1. clear() --> it deletes the text in the text box
+2. getText() --> gets the text if there is any
+
+The locator Tag-name:
+
+we use this usually when we need to access multiple elements with same tagName
+
+.getattribute() --> to get the value of an attribute from the webElement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
