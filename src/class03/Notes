@@ -150,19 +150,3 @@ The locator Tag-name:
 we use this usually when we need to access multiple elements with same tagName
 
 .getattribute() --> to get the value of an attribute from the webElement
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
