@@ -18,7 +18,7 @@ public class Frames {
         driver.switchTo().frame(0);
         // this statement will shift the focus to the first frame
         WebElement textBox = driver.findElement(By.xpath("//input[@id='name']"));
-        // send some text
+        // send some text by using the sendKeys method
         textBox.sendKeys("abracadabra");
         // get the text click on from the parent window
         driver.switchTo().defaultContent();
