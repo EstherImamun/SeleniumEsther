@@ -1,6 +1,8 @@
 package class01;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Navigate {
@@ -16,6 +18,10 @@ public class Navigate {
         driver.navigate().to("https://www.facebook.com/");
         //slow down
         Thread.sleep(2000);
+        WebElement cookieButton=driver.findElement(By.xpath("//button[@data-cookiebanner='accept_button']"));
+        if(cookieButton.isEnabled()){
+            driver.findElement(By.xpath("//button[@data-cookiebanner='accept_button']")).click();
+        }
         // go back
         driver.navigate().back();
         //slow down
@@ -26,7 +32,8 @@ public class Navigate {
         Thread.sleep(2000);
         // refresh the page
         driver.navigate().refresh();
+        driver.manage().window().maximize();
         // close the browser
-        driver.close();
+       // driver.close();
     }
 }

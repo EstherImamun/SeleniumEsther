@@ -24,9 +24,10 @@ public class SeleniumHomework {
         String URL = driver.getCurrentUrl();
         System.out.println("This is the url "+URL);
        System.out.println(driver.getTitle());
+       driver.manage().window().maximize();
         //closing the page...
-        Thread.sleep(2000);
-        driver.close();
+       // Thread.sleep(2000);
+          driver.close();
 
 
     }

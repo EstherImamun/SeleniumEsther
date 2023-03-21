@@ -1,7 +1,9 @@
 package class01;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchBrowser {
@@ -26,8 +28,13 @@ public class LaunchBrowser {
         System.out.println("the title of page is "+title);
        // slow down for 3 seconds
         Thread.sleep(3000);
+        WebElement cookieButton=driver.findElement(By.xpath("//button[@data-cookiebanner='accept_button']"));
+        if(cookieButton.isEnabled()){
+            driver.findElement(By.xpath("//button[@data-cookiebanner='accept_button']")).click();
+        }
+        driver.manage().window().maximize();
         // close the browser
-        driver.quit();
+        //driver.quit();
 
 
     }

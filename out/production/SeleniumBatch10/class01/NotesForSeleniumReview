@@ -1,0 +1,7 @@
+id -> [one value]/100% unique
+name -> [one value]/ 99% unique
+class -> [multiple values] /duplicated/ not unique
+
+SideNote:
+
+Jason Huggins invented Selenium in 2004
