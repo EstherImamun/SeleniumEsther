@@ -1,0 +1,86 @@
+Whenever we want to use switchTo an iFrame
+you can do that using 3 methods
+1. By index()
+2. By name, id
+3. By finding the WebElement or using locator
+
+indexing starts with 0 in iframe
+
+----------------------------------------------------Waits------------------------------------------------------------
+
+Implicit Wait:
+     it is going to wait for the WebElement to be found until the timeout
+Syntax:
+     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+          OR
+     driver.manage().timeouts().implicitlyWait(20000, TimeUnit.MILLISECONDS);
+
+Time limits for implicit wait is 20000 MilliSeconds and not more but if you want to increase the time limits then
+it's up to you. but 20000 MilliSeconds is advisable
+
+Approach:
+    to declare them only once in the starting of your code--> also called global waits cause it will apply to all your codes.
+
+
+Explicit Wait:
+     also known as conditional wait
+
+     Conditions:
+
+    1. wait for the webElement to be visible
+    2. wait for the webElement to be clickable
+    3. wait for the webElement to be enabled
+
+
+
+
+
+----------------------------------------------------Revision------------------------------------------------------
+
+1. SwitchTo.windows();
+2. SwitchTo.frame();
+
+Whenever there is some element in a frame, in order to interact with it we need to shift the focus of the driver to
+that frame.
+
+driver.SwitchTo.frame()-->
+
+by id or name
+by index
+by WebElement
+
+to go back to parent window we use --> driver.switchTo.defaultContent();
+
+explicit waits--->
+are they global?
+Not global
+
+implicit waits---?
+ are global waits --> they are implemented automatically to the whole class
+ the appropriate way to implement them is in the beginning of your code after driver.manage().window().maximize();
+
+ implicit wait--> is going to wait until the webElement is found
+
+ explicit wait :
+
+ conditional waits:
+  is enabled
+  is visible
+  is clickable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

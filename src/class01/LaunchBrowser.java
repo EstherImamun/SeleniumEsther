@@ -5,12 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class LaunchBrowser {
     public static void main(String[] args) throws InterruptedException {
         // tell your project where the webdriver is located
         //for Mac users please do not use .exe with chromedriver
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+       // ChromeOptions options=new ChromeOptions();
+       // options.addArguments("--remote-allow-origins=*");
 
         //create an instance of webDriver
         WebDriver driver = new ChromeDriver();

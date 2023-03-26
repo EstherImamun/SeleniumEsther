@@ -1,0 +1,24 @@
+Components of Selenium:
+  Selenium IDE {Selenium 1}
+  Selenium RC  {Selenium 2}
+  Selenium WebDriver  {Selenium 3} --> {Selenium 4.x}
+  Selenium Grid
+
+Selenium is an Open Source Tool
+  Visualize the Source code
+  Customize the code
+  Contribute to the code
+
+It's also a free License Tool:
+Selenium is a free tool
+
+Supports multiple browsers: Chrome/Firefox/Safari/Edge/IE/Opera
+Supports Operating System or OS: Windows/Mac/Linux [Unix]
+Supports Programming Languages: Java,C#, Python, Ruby, Php, JS
+
+W3C protocol: World Wide Web Consortium
+===================================================================================================
+Disadvantages of Selenium
+1.  To automate only Web Applications
+2.  We cannot automate APIs using Selenium
+

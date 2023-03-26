@@ -10,7 +10,7 @@ public class Maximize {
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
 
-        // go to google.com
+        /* go to google.com
         driver.get("https://www.google.com/");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[text()='de']")).click();
@@ -22,7 +22,7 @@ public class Maximize {
         if(acceptBtn.isEnabled()){
             driver.findElement(By.xpath("//div[text()='Accept all']")).click();
         }
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
 
     }
 }

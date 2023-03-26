@@ -1,0 +1,122 @@
+apraoch to select the check box single
+
+1. inspect the checkbox
+2. write down the correct locator in the DOM
+3. use findElement to find the check box
+4. click on it
+
+if i want to check that checkbox is selected or not?
+   checkbox.isSelected();---> True (means selected) False (means not selected)
+
+
+Preferred Approach when it comes to multiple checkboxes
+
+1. Inspect them in the DOM
+2. write the locator in such a way that it is able to select all the required checkboxes
+3. use findElements to get all those checkboxes
+4. iterate through the list
+5. while iterating, look for your desired checkbox (inspect the DOM to see which information provides you the indication
+   that this is your desired checkbox)
+6. if condition to make the selection
+......................................................................................................................
+
+Drop Down:
+Two Types:
+   1. Single select
+   2. Multi select
+   ___________________
+
+When it comes to drop down, we have a class in Selenium tha helps us interact with them
+
+--->Select class;--> in order to use this class, your drop down must be made in the DOM using the SELECT tag.
+
+Single Select Drop Down--->
+Approach:
+1. inspect the drop down
+2. Check if it has the Select tag
+3. Write down the locator to find the WebElement drop down
+4. Declare an object of the Select class (pass the Web element in the parameters)
+5. use methods from the Select class to select the desired option
+---> selectByVisibleText();
+--->selectByValue();
+--->selectByIndex();
+
+Multi Select Drop Down--->
+
+Approach:
+
+1. inspect the drop down
+2. Check if it has the Select tag
+3. Write down the locator to find the WebElement drop down
+4. Declare an object of the Select class (pass the Web element in the parameters)
+5. use methods select the desired option.
+
+
+
+--------------------------------------------Alerts------------------------------------------------------
+
+Alerts are the popup windows that appear and without dealing with them you cannot proceed on with doing anything else.
+
+You can not inspect them.
+
+3 types of Alerts:
+1. Java Script alerts ---> using SwitchTo commands.
+2. Html based alerts/popups --> we can deal with how we deal with other webElements/we can inspect it
+3. Window based --> we can not deal with them using selenium
+
+Java Script alerts:
+
+1. Simple alert
+2. Confirmation alert
+3. Prompt alert
+
+you deal with all of them in the exact same way
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

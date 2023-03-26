@@ -1,4 +1,4 @@
-package class01;
+package learningSeleniumBasicsReview;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

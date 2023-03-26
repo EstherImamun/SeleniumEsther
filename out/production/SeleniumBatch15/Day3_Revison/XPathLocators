@@ -1,0 +1,79 @@
+XPath:
+Absolute Xpath /html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input
+   Note: 1. Absolute Xpath always starts with a single forward slash [/]
+         2. Absolute Xpath always starts with html tag which is also known as the base tag
+
+
+
+
+
+
+Relative Xpath  [custom Xpath]
+   Note: 1. Relative Xpath always starts with double forward slash [//]
+         2. Relative Xpath does not start with html tag or base tag, it starts with two forward slash
+         [//] and then the tagName, attributes or text() e.t.c..
+
+   1.    //tagName[@attribute='value']
+   2.    //tagName[text()='InnerText']
+   3.    //tagName[contains(@attribute,'Partial value')]
+         //tagName[contains(@id,'userId')]
+   4.    //tagName[contains(text(),'Partial InnerText)]
+
+We can also use the "and" or the "or" function when we want to use multiple attributes in Xpath  to locate
+a web element. Example: //input[@id='userId' and @title='Email'] //with "and" function
+                        //input[@id='userId' or @title='Email']  // with "or" function
+
+
+We can also use the contains method along with the "and" or the "or" function.
+Example:  //input[contains(@id,'userId') and (@title='Email')] //with "and function"
+          //input[contains(@id,'userId') or (@title,'Email')] // with "or" function
+
+
+Example 2:  //input[contains(@placeholder,'Enter)and(@id='userId')]
+            //input[contains(@placeholder,'Enter)or(@id='userId')]
+
+We can also use the contains method along with the "and" or the "or" function with text() and not just
+with attributes
+//input[contains(@type,'userName')]
+
+We can also use the "*" function when we don't known the name of the attribute but we know the value
+Example:   //input[@*='text']
+
+To get the LinkedText we can use this method to know how many LinkedText there is
+Example:  //a[href] this is how to find the linked texts which usually are in "a" tags and also have texts
+
+We can use another method called "starts-with" . Example:
+     //a[starts-with(text(),'Amazon)] //with text
+     //a[starts-with(@id,'Amazon)] //with attribute
+
+
+We can also use indexing to make it more unique... Example:  (//input[@type='hidden'])[1]
+
+Some tags do not work with Xpath. this tag is called "svg". for locating "svg" tags we use a different
+way. Example:  //*[local-name()='svg']//*[name()='g']           //with the "g" as name
+way. Example:  //*[local-name()='svg']//*[name()='path']        //with the "path" as name
+
+We can also use the contains method like this
+               //input[@type='checkbox' and contains(@id,'day')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
