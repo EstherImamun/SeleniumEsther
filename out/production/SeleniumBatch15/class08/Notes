@@ -1,0 +1,43 @@
+Tables:
+1. Static  2. Dynamic
+
+
+
+
+
+Example to locate a webElement that is Dynamic:   //table[@class='SampleTable']/tbody/tr[2+2]/td[1]
+
+
+
+
+
+-------------Task: tell me the rack number that contains the gold-----------------------------------------
+Conditions: 1. you can only put metals in the container. 2. in code you can use only container
+
+METAL CONTAINER         RACK--> contains both leather and metals
+1. Silver               LEATHER:
+2. gold                 Shoes B
+3. iron                 Shoes B
+4. Titanium             METALS
+5. gold                 Silver
+                        gold
+                        iron
+                        titanium
+                        gold
+
+
+Approach:
+1. find all the metals and put them in the container
+2. loop until the container is empty
+   for(int i=0;i<container.size;i++){
+   if(container i==gold){
+   print("the container with gold is ")i
+
+   }
+
+   }
+
+
+
+  getting the checkbox associated with our desired entry of the column
+  //table[@class='SampleTable']/tbody/tr[i+2]/td[1]
